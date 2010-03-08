@@ -1,0 +1,54 @@
+#rock
+  - if user_choice && user_choice.to_s == 'rock'
+    %img{ :id => 'rock_image', :src => "images/rock_user.png"}
+  - elsif computer_choice && computer_choice.to_s == 'rock'
+    %img{ :id => 'rock_image', :src => "images/rock_computer.png"}
+  - else
+    %img{ :id => 'rock_image', :src => "images/rock.png"}
+
+#lizard_paper
+  - if user_choice && user_choice.to_s == 'lizard'
+    %img{ :id => 'lizard_image', :src => "images/lizard_user.png"}
+  - elsif computer_choice && computer_choice.to_s == 'lizard'
+    %img{ :id => 'lizard_image', :src => "images/lizard_computer.png"}
+  - else
+    %img{ :id => 'lizard_image', :src => "images/lizard.png"}
+
+
+  - if user_choice && user_choice.to_s == 'paper'
+    %img{ :id => 'paper_image', :src => "images/paper_user.png"}
+  - elsif computer_choice && computer_choice.to_s == 'paper'
+    %img{ :id => 'paper_image', :src => "images/paper_computer.png"}
+  - else
+    %img{ :id => 'paper_image', :src => "images/paper.png"}
+
+#spock_scissors
+  - if user_choice && user_choice.to_s == 'spock'
+    %img{ :id => 'spock_image', :src => "images/spock_user.png"}
+  - elsif computer_choice && computer_choice.to_s == 'spock'
+    %img{ :id => 'spock_image', :src => "images/spock_computer.png"}
+  - else
+    %img{ :id => 'spock_image', :src => "images/spock.png"}
+
+  - if user_choice && user_choice.to_s == 'scissors'
+    %img{ :id => 'scissors_image', :src => "images/scissors_user.png"}
+  - elsif computer_choice && computer_choice.to_s == 'scissors'
+    %img{ :id => 'scissors_image', :src => "images/scissors_computer.png"}
+  - else
+    %img{ :id => 'scissors_image', :src => "images/scissors.png"}
+
+
+#selection
+  %form{ :action => "/", :method => 'post'}
+    %input{ :type => 'radio', :name => 'choice', :value => '0' } Rock
+    %input{ :type => 'radio', :name => 'choice', :value => '1' } paper
+    %input{ :type => 'radio', :name => 'choice', :value => '2' } Scissors
+    %input{ :type => 'radio', :name => 'choice', :value => '3' } Spock
+    %input{ :type => 'radio', :name => 'choice', :value => '4' } Lizard
+    %input{ :type => 'submit' }
+
+
+- if result
+  #result
+    %p  You chose #{user_choice}, and computer chose #{computer_choice}
+    %p= result
