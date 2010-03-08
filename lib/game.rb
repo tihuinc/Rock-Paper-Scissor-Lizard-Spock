@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'item'
+require 'lib/item'
 
 class Game
   attr_accessor :choice_id, :user_choice, :computer_choice
