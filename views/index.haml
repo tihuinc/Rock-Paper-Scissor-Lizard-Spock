@@ -1,42 +1,15 @@
 #rock
-  - if user_choice && user_choice.to_s == 'rock'
-    %img{ :id => 'rock_image', :src => "images/rock_user.png"}
-  - elsif computer_choice && computer_choice.to_s == 'rock'
-    %img{ :id => 'rock_image', :src => "images/rock_computer.png"}
-  - else
-    %img{ :id => 'rock_image', :src => "images/rock.png"}
+  = item_image(user_choice, computer_choice, 'rock')
 
 #lizard_paper
-  - if user_choice && user_choice.to_s == 'lizard'
-    %img{ :id => 'lizard_image', :src => "images/lizard_user.png"}
-  - elsif computer_choice && computer_choice.to_s == 'lizard'
-    %img{ :id => 'lizard_image', :src => "images/lizard_computer.png"}
-  - else
-    %img{ :id => 'lizard_image', :src => "images/lizard.png"}
+  = item_image(user_choice, computer_choice, 'lizard')
 
-
-  - if user_choice && user_choice.to_s == 'paper'
-    %img{ :id => 'paper_image', :src => "images/paper_user.png"}
-  - elsif computer_choice && computer_choice.to_s == 'paper'
-    %img{ :id => 'paper_image', :src => "images/paper_computer.png"}
-  - else
-    %img{ :id => 'paper_image', :src => "images/paper.png"}
+  = item_image(user_choice, computer_choice, 'paper')
 
 #spock_scissors
-  - if user_choice && user_choice.to_s == 'spock'
-    %img{ :id => 'spock_image', :src => "images/spock_user.png"}
-  - elsif computer_choice && computer_choice.to_s == 'spock'
-    %img{ :id => 'spock_image', :src => "images/spock_computer.png"}
-  - else
-    %img{ :id => 'spock_image', :src => "images/spock.png"}
+  = item_image(user_choice, computer_choice, 'spock')
 
-  - if user_choice && user_choice.to_s == 'scissors'
-    %img{ :id => 'scissors_image', :src => "images/scissors_user.png"}
-  - elsif computer_choice && computer_choice.to_s == 'scissors'
-    %img{ :id => 'scissors_image', :src => "images/scissors_computer.png"}
-  - else
-    %img{ :id => 'scissors_image', :src => "images/scissors.png"}
-
+  = item_image(user_choice, computer_choice, 'scissors')
 
 #selection
   %form{ :action => "/", :method => 'post'}
